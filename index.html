@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git-Repo-Name(s)=>GitCommands to update remote push App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  <style>
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    /* html file of a Javascript(+html, and css) simple special-purposes          */
+    /* text-processing web-application made fullstack from scratch               */
+    /* (designed and implemented between 20/May/2022 and 22/May/2022)           */
+    /* by Rami Al-Saadi in May 2022 for educational and showcase purposes.     */
+    /*          © 2022 Rami Al-Saadi | All Rights Reserved                    */
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  </style>
+  <body>
+    <hr style="margin-top: 0" />
+    <header>
+      <h1>Git Multiple/New Remote-URL Processor</h1>
+      <h2>Put in your Repos names</h2>
+
+      <p>Copy and paste your git-ssh-URLs in here:</p>
+    </header>
+    <form id="form1">
+      <span id="err1"></span>
+      <label for="repo11">Enter Old/First git-Repo URL:</label>
+      <input
+        type="text"
+        id="repo11"
+        name="repo1"
+        placeholder="git@github.com:gHUserName/repo1Name.git"
+      /><br />
+      <label for="repo22">Enter New/Second git-Repo URL:</label>
+      <input
+        type="text"
+        id="repo22"
+        name="repo2"
+        placeholder="git@github.com:gHUserName/repo2Name.git"
+        required
+      /><span id="err2"></span><br /><br />
+      <button type="button" onclick="javascript:void(processURLs());">
+        Enter
+      </button>
+    </form>
+    <hr />
+    <div id="resultDiv">
+      <section class="span1">
+        <h2>To set future "push"es to your new Repo (only)</h2>
+        <h3 id="paste1"></h3>
+        <br />
+        <div id="switchRepoText" onclick="copyDivToClipboard(event);">
+          <p>git remote add remote2Origin remote_2_url</p>
+          <p>git remote set-url --add --push remote2Origin remote_2_url</p>
+          <p>git push -u remote2Origin</p>
+          <p>git remote show</p>
+          <p>git status</p>
+        </div>
+        <br />
+        <hr />
+      </section>
+      <section class="bothReposResult">
+        <h2>To set the next "push"es to both repos at the same time</h2>
+        <h3 id="paste2"></h3>
+        <br />
+        <div id="addRepoText" onclick="copyDivToClipboard(event);">
+          <p>git remote add remote2Origin remote_2_url</p>
+          <p>git remote set-url --add --push remote2Origin remote_2_url</p>
+          <p>git remote add <span class="italic">group</span> remote_1_url</p>
+          <p>
+            git remote set-url --add --push
+            <span class="italic">group</span> remote_2_url
+          </p>
+          <p>
+            git remote set-url --add --push
+            <span class="italic">group</span> remote_1_url
+          </p>
+          <p>
+            git push -u <span class="italic">group</span>
+          </p>
+          <p>git status</p>
+          <p>git remote show</p>
+        </div>
+      </section>
+      <br />
+      <hr />
+      <div class="banner"><p>© 2022 Rami Al-Saadi | All Rights Reserved</p></div>
+      <hr />
+      <section>
+        <h2>Adding the first remote origin:</h2>
+        <div id="addFirst" onclick="copyDivToClipboard(event);">
+          <p>git remote add origin remote_1_url</p>
+          <p>git remote set-url origin remote_1_url</p>
+        </div>
+      </section>
+      <h3>Set the default remote branch for the current local branch</h3>
+      <div onclick="copyDivToClipboard(event);">
+        <p>git branch --set-upstream main</p>
+      </div>
+      <h3>or</h3>
+      <div onclick="copyDivToClipboard(event);">
+        <p>git push -u origin main</p>
+      </div>
+      <section>
+        <h2>Adding the second remote remote2Origin</h2>
+        <div onclick="copyDivToClipboard(event);">
+          <p>git remote add remote2Origin remote_2_url</p>
+          <p>git remote set-url --add --push remote2Origin remote_2_url</p>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Adding the common remote <span class="italic">group</span> 
+          </h2>
+          <h3>allows us to push to both at the same time</h3>
+        </h2>
+        <div onclick="copyDivToClipboard(event);">
+          <p>git remote add <span class="italic">group</span> remote_1_url</p>
+          <p>
+            git remote set-url --add --push
+            <span class="italic">group</span> remote_2_url
+          </p>
+          <p>
+            git remote set-url --add --push
+            <span class="italic">group</span> remote_1_url
+          </p>
+        </div>
+      </section>
+      <h2>Pushing to remotes:</h2>
+      <h3>- To origin</h3>
+      <div onclick="copyDivToClipboard(event);">
+        <p>git push origin main</p>
+      </div>
+      <h3>- To repo-2</h3>
+      <div onclick="copyDivToClipboard(event);">
+        <p>git push remote2Origin main</p>
+      </div>
+      <h3>- To <span>both</span></h3>
+      <div onclick="copyDivToClipboard(event);">
+        <p>git push <span class="italic">group</span> main</p>
+      </div>
+      <section>
+        <h2>Remove remote Url</h2>
+        <div onclick="copyDivToClipboard(event);">
+          <p>git remote rm <span class="noTouchIt">'URL OF REMOTE'</span> </p>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <hr />
+      <p>a Javascript Web-App made by Rami Al-Saadi in May 2022</p>
+      <p>© 2022 Rami Al-Saadi | All Rights Reserved</p>
+
+      <hr />
+    </footer>
+    <script
+      src="ramijApp1.js"
+      type="text/javascript"
+      language="javascript"
+    ></script>
+  </body>
+  <!--                                 *                                               
+             *                  *                  *
+        *         *        *             *                *       *
+       *  A Javascript(+ HTML & CSS) simple special-purposes   *       *        *
+      * text-processing web-app made fullstack from scratch    *            *
+     * (designed and implemented between 20/May/2022 and 21/May/2022)    *        *
+    * by Rami Al-Saadi in May 2022 created for educational and showcase purposes.       *   *
+   * © 2022 Rami Al-Saadi | All Rights Reserved   *        *          *        *              *
+ * * *  *  *   *     *        *             *        *           *         *                     -->
+</html>

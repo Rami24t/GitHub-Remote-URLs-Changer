@@ -1,0 +1,105 @@
+Solution:
+
+- Input: Part 1 (remote_1_url remote_2_url)
+- Output: Something like this text but not abstract:
+
+" Add Multiple Remotes URLs to git
+Adding the first remote origin
+
+git remote add origin remote_1_url
+git remote set-url origin remote_1_url
+
+# Set the default remote branch for the current local branch
+git branch --set-upstream main
+# or
+git push -u origin main
+
+Adding the second remote codecommit
+
+git remote add codecommit remote_2_url
+git remote set-url --add --push codecommit remote_2_url
+
+Adding the common remote all - Allows us to push both at the same time
+
+git remote add all remote_1_url
+git remote set-url --add --push all remote_2_url
+git remote set-url --add --push all remote_1_url
+
+Pushing to remotes
+
+# To origin
+git push origin main
+
+# To repo-2
+git push codecommit main
+
+# To ALL
+git push all main
+
+Remove remote Urls
+
+git remote rm {{REMOTE-NAME}} "
+
+
+Expected results in copy cilpboard:
+
+-
+git remote add remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote add all git@github.com:gHUserName/repo1Name.git
+
+git remote set-url --add --push all git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push all git@github.com:gHUserName/repo1Name.git
+
+git remote show
+
+
+-
+git remote add remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git push -u remote2Origin
+
+git remote show
+
+git status
+
+-
+git remote add origin remote_1_url
+
+git remote set-url origin remote_1_url
+
+Tested results :
+- When user enters both repos:
+git remote add remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote add all git@github.com:gHUserName/repo1Name.git
+
+git remote set-url --add --push all git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push all git@github.com:gHUserName/repo1Name.git
+
+git remote show
+
+
+-When user enters new repo only:
+git remote add remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git remote set-url --add --push remote2Origin git@github.com:gHUserName/repo2Name.git
+
+git push -u remote2Origin
+
+git remote show
+
+git status
+
+-When user enters First Repo only: 
+git remote add origin remote_1_url
+
+git remote set-url origin remote_1_url

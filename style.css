@@ -1,0 +1,245 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/
+/* CSS Stylesheet for:                                                         */
+/*               A Javascript simple special-purposes                         */
+/*        text-processing web-application made fullstack from scratch        */
+/*  (designed and implemented between 20/May/2022 and 21/May/2022)          */
+/* by Rami Al-Saadi in May 2022 for educational and showcase purposes.     */
+/*          © 2022 Rami Al-Saadi | All Rights Reserved                    */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+html:root {
+  --glow-color: rgba(189, 255, 176);
+  --glow-spread-color: rgba(171, 255, 123, 0.781);
+  --enhanced-glow-color: rgb(208, 255, 206);
+  --btn-color: rgb(61, 136, 77);
+}
+html,
+body,
+div,
+span,
+object,
+h1,
+h2,
+h3,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+fieldset,
+form,
+label,
+footer,
+input,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+input,
+select {
+  vertical-align: middle;
+}
+body {
+  line-height: 1;
+  color: #efffeeda;
+  background-image: radial-gradient(
+      rgba(0, 32, 36, 0.5) 10%,
+      rgb(11, 70, 7) 100%
+    ),
+    url(http://www.pixelstalk.net/wp-content/uploads/2016/10/Nature-background-free-download.jpg);
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+  margin: auto;
+  min-height: 97vh;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: xx-large;
+  padding: 0 1rem 1rem 0;
+}
+h2 {
+  font-size: x-large;
+  padding: 0.5rem;
+}
+h3 {
+  font-size: larger;
+  padding: 0.3rem;
+}
+p {
+  font-size: large;
+  padding: 0.2rem;
+}
+
+form {
+  margin: auto;
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  min-width: 45%;
+  max-width: 70%;
+  font-size: 1.1rem;
+}
+input {
+  display: block;
+  width: 100%;
+  line-height: 200%;
+  margin: auto;
+  margin-bottom: 5%;
+  border-bottom: #00bc4b solid 0.18rem;
+  background-color: rgba(0, 0, 0, 0.082);
+  color: #efefef;
+}
+button {
+  margin: auto;
+  display: block;
+  width: 45%;
+  line-height: 256%;
+  margin-top: 0.9%;
+  border: #00bc4b solid 0.18rem;
+  background-color: transparent;
+  font-size: 1rem;
+  border: 0.25em solid var(--glow-color);
+  color: var(--glow-color);
+  font-weight: bold;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  transition: all 0.2s;
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+}
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+  transform: scale(0.95);
+}
+
+input::placeholder {
+  color: #efefef;
+}
+
+.span1 {
+  color: rgb(255, 255, 62);
+}
+
+.greenColor {
+  color: #00bc4b;
+}
+.redColor {
+  color: rgb(255, 0, 0);
+}
+#repo11::placeholder {
+  color: var(--a, default);
+}
+#repo22::placeholder {
+  color: var(--c, default);
+}
+label,
+h1,
+h2,
+header p,
+form span,
+.noTouchIt,
+h3 {
+  color: rgb(173, 199, 173);
+  user-select: none;
+}
+.yellowGreenColor {
+  color: rgb(105, 240, 105);
+}
+span::selection,
+p::selection {
+  background-color: rgb(20, 9, 13);
+  color: #fff;
+}
+div > section > div:hover {
+  background-color: rgba(51, 33, 0, 0.1);
+}
+.banner,
+footer,
+h1 {
+  background: linear-gradient(120grad, #15995715, #69159967);
+}
+.copied {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  background-color: #3a3a3a75;
+  color: rgb(187, 226, 119);
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+form > input::selection {
+  background-color: rgb(49, 151, 39);
+}
+.italic {
+  color: rgb(142, 187, 173);
+  font-style: italic;
+}
+.banner p {
+  animation: travelRight 10s linear infinite reverse;
+}
+@keyframes travelRight {
+  from {
+    translate: -70% 0%;
+  }
+  to {
+    translate: 70% 0%;
+  }
+}
+#resultDiv {
+  display: none;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/
+/* End of: CSS Stylesheet.                                                     */
+/*              for A Javascript simple special-purposes                      */
+/*        text-processing web-application made fullstack from scratch        */
+/*  (designed and implemented between 20/May/2022 and 21/May/2022)          */
+/* by Rami Al-Saadi in May 2022 for educational and showcase purposes.     */
+/*          © 2022 Rami Al-Saadi | All Rights Reserved                    */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
