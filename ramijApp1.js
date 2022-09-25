@@ -137,3 +137,14 @@ function showNotification({ top = 2, right = 2, className, html }) {
     }
   }
 }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*      Javascript(+html, and css) simple special-purposes                    */
+/* text-processing web-application made fullstack from scratch               */
+/* (designed and implemented between 20/May/2022 and 22/May/2022)           */
+/* by Rami Al-Saadi in May 2022 for showcase and educational purposes.     */
+/*          © 2022 Rami Al-Saadi | All Rights Reserved                    */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ // This app mainly takes two URLs as input, processes, and produces git commands as output (output can be used to to update connected online remote repositories)
+// Instead of seeking commands manually and copying them line by line, you can copy them as a bunch depending on your need.
