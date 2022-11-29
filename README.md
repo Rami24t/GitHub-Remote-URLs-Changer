@@ -9,3 +9,5 @@
     * by Rami Al-Saadi in May 2022 created for educational and showcase purposes.       *   *
    * © 2022 Rami Al-Saadi | All Rights Reserved   *        *          *        *              *
  * * *  *  *   *     *        *             *        *           *         *                    
+
+live version: https://rami24t.github.io/GitHub-Remote-URLs-Changer/
